@@ -41,7 +41,7 @@ ssh_com_rpi_demo
 └── utilities.py
 ```
 
-+++?code=assets/md/assets/code/ssh_com_rpi_demo/controller/rpi.py
++++?code=assets/code/ssh_com_rpi_demo/controller/rpi.py
 
 @[1](literal_eval: str -> dict)
 @[2](stdin: standardowe wejście)
