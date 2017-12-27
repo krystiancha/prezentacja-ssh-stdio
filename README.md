@@ -1,1 +1,0 @@
-# prezentacja-ssh-stdio
