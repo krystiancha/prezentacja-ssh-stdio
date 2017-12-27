@@ -41,7 +41,7 @@ ssh_com_rpi_demo
 └── utilities.py
 ```
 
-+++?code=assets/code/ssh_com_rpi_demo/controller/rpi.py&lang=python3
++++?code=assets/code/ssh_com_rpi_demo/controller/rpi.py&lang=python
 
 @[1](literal_eval: str -> dict)
 @[2](stdin: standardowe wejście)
@@ -82,7 +82,7 @@ ssh_com_rpi_demo
 └── utilities.py
 ```
 
-+++?code=assets/code/ssh_com_rpi_demo/controller/pc.py&lang=python3
++++?code=assets/code/ssh_com_rpi_demo/controller/pc.py&lang=python
 @[2](Popen: proces klienta ssh)
 @[10](FixedSizeList.push(): wyrzuca najstarszy element, aby zrobić miejsce dla nowego)
 
