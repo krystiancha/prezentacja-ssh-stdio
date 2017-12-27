@@ -20,12 +20,19 @@ class PC:
         self.samples_visible = 10
         self.x_head = 0
 
-        self.xdata = FixedSizeList([None for _ in range(self.samples_visible)])
-        self.ydata = FixedSizeList([None for _ in range(self.samples_visible)])
+        self.xdata = FixedSizeList(
+            [None for _ in range(self.samples_visible)]
+        )
+        self.ydata = FixedSizeList(
+            [None for _ in range(self.samples_visible)]
+        )
 
         self._init_gui()
 
-        self.process_input_thread = Thread(target=self._process_input, daemon=False)
+        self.process_input_thread = Thread(
+            target=self._process_input,
+            daemon=False,
+        )
         self.process_input_thread.start()
 
     def _init_gui(self):
@@ -56,12 +63,19 @@ class PC:
 
     def _update_scope(self, frame=None):
         self.scope.set_data(self.xdata, self.ydata)
-        self.scope_ax.set_xlim(self.x_head - self.samples_visible + 1, self.x_head)
+        self.scope_ax.set_xlim(
+            self.x_head - self.samples_visible + 1,
+            self.x_head,
+        )
         return self.scope,
 
 
 rpi = Popen(
-    ['ssh', 'protecto@192.168.8.110', 'cd ssh_com_rpi_demo && python3 -u -m controller.rpi'],
+    [
+        'ssh',
+        'protecto@192.168.8.110',
+        'cd ssh_com_rpi_demo && python3 -u -m controller.rpi'
+    ],
     bufsize=1,
     stdin=PIPE,
     stdout=PIPE,
