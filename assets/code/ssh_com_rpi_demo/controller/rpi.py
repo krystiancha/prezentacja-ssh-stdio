@@ -17,10 +17,16 @@ class RPi:
         GPIO.setup(list(self.pins.values()), GPIO.OUT)
         GPIO.output(list(self.pins.values()), list(self.rgb.values()))
 
-        self.process_input_thread = Thread(target=self._process_input, daemon=True)
+        self.process_input_thread = Thread(
+            target=self._process_input,
+            daemon=True
+        )
         self.process_input_thread.start()
 
-        self.output_temperature_thread = Thread(target=self._output_temperature, daemon=False)
+        self.output_temperature_thread = Thread(
+            target=self._output_temperature,
+            daemon=False
+        )
         self.output_temperature_thread.start()
 
     def _process_input(self):
