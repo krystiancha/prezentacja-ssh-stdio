@@ -11,6 +11,23 @@
 
 +++
 
+```python
+d = {
+    'category': 'A+',
+}
+
+d['category'] = 'A'
+d.update({'eres': False})
+
+# Otrzymamy d = 
+{
+    'category': 'A',
+    'eres': False
+}
+```
+
++++
+
 ```text
 ssh_com_rpi_demo
 ├── __init__.py
@@ -84,9 +101,65 @@ ssh_com_rpi_demo
 
 +++?code=assets/code/ssh_com_rpi_demo/controller/pc.py&lang=python
 @[2](Popen: proces klienta ssh)
-@[10](FixedSizeList.push(): wyrzuca najstarszy element, aby zrobić miejsce dla nowego)
+@[10](FixedSizeList.push(): wyrzuca najstarszy element, robi miejsce dla nowego)
 
+@[73-84](Uruchamiamy klienta ssh)
 @[13](Klasa PC)
+@[14](Nazwy diód (kluczy w słowniku))
+@[86-89](Przykładowe wywołanie metody \_\_init\_\_)
+@[16](Metoda \_\_init\_\_)
+@[17-18](Przypisanie wartości polom)
+@[20-28](Utworzenie pól dotyczących wykresu)
+@[30](Utworzenie GUI)
+@[38](Metoda tworząca GUI)
+@[32-36](Utworzenie wątku przetwarzającego stdin)
+@[55-62](Metoda _process_input)
+
++++
+
+```text
+ssh_com_rpi_demo
+├── __init__.py
+├── controller
+│   ├── __init__.py
+│   ├── pc.py
+│   └── rpi.py
+├── processing
+│   ├── __init__.py
+│   ├── pc.py
+│   └── rpi.py      <---
+└── utilities.py
+```
+
++++?code=assets/code/ssh_com_rpi_demo/processing/rpi.py&lang=python
+
+@[3](timeit: mierzenie czasu wykonania fragmentu kodu)
+@[7](pidigits(n): oblicza n cyfr rozwinięcia dziesiętnego liczby Pi)
+
+@[10-13](Funkcja pidigits_remote zleca PC wykonanie pidigits)
+@[12](Uwaga: w tym miejscu program czeka na wynik)
+
+@[16-25](Opracuj i wyślij statystyki)
+
++++
+
+```text
+ssh_com_rpi_demo
+├── __init__.py
+├── controller
+│   ├── __init__.py
+│   ├── pc.py
+│   └── rpi.py
+├── processing
+│   ├── __init__.py
+│   ├── pc.py       <---
+│   └── rpi.py
+└── utilities.py
+```
+
++++
+
+
 
 +++
 
