@@ -85,6 +85,8 @@ ssh_com_rpi_demo
 @[48-51](Odczytaj temperaturę i jeśli odczyt się powiódł, wyślij na stdout)
 +++
 
+#### Python: dict (słownik)
+
 ```text
 ssh_com_rpi_demo
 ├── __init__.py
@@ -98,6 +100,17 @@ ssh_com_rpi_demo
 │   └── rpi.py
 └── utilities.py
 ```
+
++++
+
+#### Serializacja danych
+
+* wysyłamy `str`
+* chcemy wysłać `dict`
+
+
+* przed wysłaniem serializujemy `dict` do `str` używając `str()`
+* po odebraniu deserializujemy `str` do `dict` używając `ast.literal_eval()`
 
 +++?code=assets/code/ssh_com_rpi_demo/controller/pc.py&lang=python
 @[2](Popen: proces klienta ssh)
