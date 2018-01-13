@@ -32,14 +32,16 @@ d.update({'eres': False})
 
 #### Serializacja danych: problem
 
-* chcemy wysłać `dict`, zakładamy że bezpośrednio możemy wysłać tylko `str`
+* chcemy wysłać `dict`, zakładamy że bezośrednio możemy wysłać tylko `str`
+
 * chcemy odebrać `dict`, zakładamy że bezpośrednio odbieramy `str` 
 
 +++
 
-#### Serializacja danych
+#### Serializacja danych: przykładowe rozwiązanie
 
 * przed wysłaniem serializujemy `dict` do `str` używając `str()`
+
 * po odebraniu deserializujemy `str` do `dict` używając `ast.literal_eval()`
 
 +++
