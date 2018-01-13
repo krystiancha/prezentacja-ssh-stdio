@@ -7,10 +7,6 @@
 
 +++
 
-![Logo](assets/img/processing.png)
-
-+++
-
 #### Python: dict (słownik)
 
 ```python
@@ -53,10 +49,6 @@ ssh_com_rpi_demo
 │   ├── __init__.py
 │   ├── pc.py
 │   └── rpi.py
-├── processing
-│   ├── __init__.py
-│   ├── pc.py
-│   └── rpi.py
 └── utilities.py
 ```
 
@@ -69,10 +61,6 @@ ssh_com_rpi_demo
 │   ├── __init__.py
 │   ├── pc.py
 │   └── rpi.py      <---
-├── processing
-│   ├── __init__.py
-│   ├── pc.py
-│   └── rpi.py
 └── utilities.py
 ```
 
@@ -109,10 +97,6 @@ ssh_com_rpi_demo
 │   ├── __init__.py
 │   ├── pc.py       <---
 │   └── rpi.py
-├── processing
-│   ├── __init__.py
-│   ├── pc.py
-│   └── rpi.py
 └── utilities.py
 ```
 
@@ -132,6 +116,10 @@ ssh_com_rpi_demo
 @[39](Metoda tworząca GUI)
 @[33-37](Utworzenie wątku przetwarzającego stdin)
 @[56-63](Metoda _process_input)
+
++++
+
+![Logo](assets/img/processing.png)
 
 +++
 
