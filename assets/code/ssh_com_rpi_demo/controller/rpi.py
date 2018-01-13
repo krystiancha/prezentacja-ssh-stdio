@@ -13,19 +13,18 @@ class RPi:
 
         self.rgb = {key: False for key in self.pins.keys()}
 
-        GPIO.setwarnings(False)
         GPIO.setup(list(self.pins.values()), GPIO.OUT)
         GPIO.output(list(self.pins.values()), list(self.rgb.values()))
 
         self.process_input_thread = Thread(
             target=self._process_input,
-            daemon=True
+            daemon=False,
         )
         self.process_input_thread.start()
 
         self.output_temperature_thread = Thread(
             target=self._output_temperature,
-            daemon=False
+            daemon=True,
         )
         self.output_temperature_thread.start()
 
@@ -38,9 +37,7 @@ class RPi:
 
             GPIO.output(list(self.pins.values()), list(self.rgb.values()))
 
-            if data.get('exit', False):
-                GPIO.cleanup()
-                exit()
+        GPIO.cleanup()
 
     def _output_temperature(self):
         while True:

@@ -7,6 +7,7 @@ from matplotlib.animation import FuncAnimation
 from matplotlib.gridspec import GridSpec
 from matplotlib.widgets import CheckButtons
 
+from config import SSH_USER_HOSTNAME
 from utilities import FixedSizeList
 
 
@@ -31,7 +32,7 @@ class PC:
 
         self.process_input_thread = Thread(
             target=self._process_input,
-            daemon=False,
+            daemon=True,
         )
         self.process_input_thread.start()
 
@@ -73,7 +74,7 @@ class PC:
 rpi = Popen(
     [
         'ssh',
-        'protecto@192.168.8.110',
+        SSH_USER_HOSTNAME,  # robot@192.168.123.101
         'cd ssh_com_rpi_demo && python3 -u -m controller.rpi'
     ],
     bufsize=1,

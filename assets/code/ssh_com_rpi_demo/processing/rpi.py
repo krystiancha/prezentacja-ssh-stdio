@@ -1,10 +1,8 @@
 from ast import literal_eval
-from sys import stdin, stderr
+from sys import stdin
 from timeit import timeit
 
-from math import exp
-
-from processing.pidigits import pidigits
+from utilities import pidigits
 
 
 def pidigits_remote(n):
