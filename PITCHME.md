@@ -1,6 +1,5 @@
 # prezentacja-ssh-stdio
 
-
 +++
 
 ![Logo](assets/img/controller.png)
@@ -41,6 +40,8 @@ d.update({'eres': False})
 * po odebraniu deserializujemy `str` do `dict` używając `ast.literal_eval()`
 
 +++
+
+#### Struktura projektu
 
 ```text
 ssh_com_rpi_demo
@@ -115,6 +116,7 @@ ssh_com_rpi_demo
 @[31](Utworzenie GUI)
 @[39](Metoda tworząca GUI)
 @[33-37](Utworzenie wątku przetwarzającego stdin)
+@[53-54](Wysyłanie polecenia zaświecenia lub zgaszenia diody jeśli zostanie zmieniony stan dowolnego przycisku)
 @[56-63](Metoda _process_input)
 
 +++
@@ -140,7 +142,7 @@ ssh_com_rpi_demo
 +++?code=assets/code/ssh_com_rpi_demo/processing/rpi.py&lang=python
 
 @[3](timeit: mierzenie czasu wykonania fragmentu kodu)
-@[7](pidigits(n): oblicza n cyfr rozwinięcia dziesiętnego liczby Pi)
+@[5](pidigits(n): oblicza n cyfr rozwinięcia dziesiętnego liczby Pi)
 
 @[8-11](Funkcja pidigits_remote zleca PC wykonanie pidigits)
 @[10](Uwaga: w tym miejscu program czeka na wynik)
@@ -173,4 +175,6 @@ ssh_com_rpi_demo
 
 +++
 
-https://www.raspberrypi.org/learning/hardware-guide/
+#### Żródła:
+
+Obrazki: https://www.raspberrypi.org/learning/hardware-guide/
