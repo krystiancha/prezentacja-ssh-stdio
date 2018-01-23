@@ -233,6 +233,10 @@ Na podstawie **22** próbek ustaliłem, że średnia latencja wynosi **0.3 ± 0.
 
 +++
 
+[img](assets/img/fbf.png)
+
++++
+
 #### Dziękuję za uwagę
 
 Tę prezentację można znaleźć pod adresem: [https://gitpitch.com/protecto/prezentacja-ssh-stdio/dev](gitpitch.com/protecto/prezentacja-ssh-stdio)
