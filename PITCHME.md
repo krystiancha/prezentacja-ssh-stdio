@@ -1,6 +1,6 @@
-# Przykłady metod i zastosowań komunikacji między urządzeniami w sieci
+## Przykłady metod i zastosowań komunikacji między urządzeniami w sieci
 
-## ze szczególnym uwzględnieniem połączenia ROBOT <-> PC
+### ze szczególnym uwzględnieniem połączenia ROBOT <-> PC
 
 ![Logo](assets/img/controller.png)
 
