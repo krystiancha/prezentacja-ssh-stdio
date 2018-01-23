@@ -239,6 +239,6 @@ Na podstawie **22** próbek ustaliłem, że średnia latencja wynosi **0.3 ± 0.
 
 #### Dziękuję za uwagę
 
-Tę prezentację można znaleźć pod adresem: [https://gitpitch.com/protecto/prezentacja-ssh-stdio/dev](gitpitch.com/protecto/prezentacja-ssh-stdio)
+Tę prezentację można znaleźć pod adresem: [gitpitch.com/protecto/prezentacja-ssh-stdio](https://gitpitch.com/protecto/prezentacja-ssh-stdio)
 
-Źródło obrazków: https://www.raspberrypi.org/learning/hardware-guide/
+Źródło obrazków: [raspberrypi.org/learning/hardware-guide/](https://www.raspberrypi.org/learning/hardware-guide/)
