@@ -1,0 +1,2 @@
+# SSH_USER_HOSTNAME = 'protecto@192.168.123.101'
+SSH_USER_HOSTNAME = 'protecto@192.168.0.4'
