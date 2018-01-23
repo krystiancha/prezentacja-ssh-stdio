@@ -233,7 +233,7 @@ Na podstawie **22** próbek ustaliłem, że średnia latencja wynosi **0.3 ± 0.
 
 +++
 
-[img](assets/img/fbf.png)
+![Logo](assets/img/fbf.png)
 
 +++
 
