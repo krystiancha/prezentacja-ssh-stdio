@@ -1,4 +1,8 @@
-# prezentacja-ssh-stdio
+# Przykłady metod i zastosowań komunikacji między urządzeniami w sieci
+
+## ze szczególnym uwzględnieniem połączenia ROBOT <-> PC
+
+![Logo](assets/img/controller.png)
 
 +++
 
