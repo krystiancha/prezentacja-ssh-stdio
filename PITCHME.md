@@ -175,6 +175,61 @@ ssh_com_rpi_demo
 
 +++
 
-#### Żródła:
+#### Inne sposoby komunikacji: socket (gniazdo)
 
-Obrazki: https://www.raspberrypi.org/learning/hardware-guide/
+W tym przypadku TCP
+
+```bash
+# serwer (PC)
+
+nc -p 4242 -l 0.0.0.0 | mplayer -fps 40 -demuxer h264es -
+
+
+# klient (RPi)
+
+raspivid -fps 40 -o - | nc 192.168.123.100 #...
+# lub
+raspivid -o tcp://192.168.123.100:4242 -fps 40 #...
+```
+
+@[1,3](PC nasłuchuje na wszystkich intefejsach sieciowych na porcie 4242. To, co odbierze będzie na bieżąco przekaywane do odtwarzacza.)
+@[6,8](raspivid przekazuje programowi netcat skompresowane wideo, netcat łączy się z serwerem i wysyła dane na bieżąco.)
+
++++
+
+#### Inne sposoby komunikacji: socket (gniazdo)
+
+Na podstawie **22** próbek ustaliłem, że średnia latencja wynosi **0.3 ± 0.1 s** (mediana **303 ms**)
+
+```text
+275
+302
+300
+341
+304
+300
+323
+326
+323
+352
+302
+296
+324
+297
+323
+295
+298
+349
+294
+347
+318
+293
+```
+
++++
+
+#### Dziękuję za uwagę
+
+Tę prezentację można znaleźć pod adresem: [https://gitpitch.com/protecto/prezentacja-ssh-stdio/dev](gitpitch.com/protecto/prezentacja-ssh-stdio)
+
+Źródło obrazków: https://www.raspberrypi.org/learning/hardware-guide/
