@@ -198,6 +198,7 @@ raspivid -o tcp://192.168.123.100:4242 -fps 40 #...
 
 @[1,3](PC nasłuchuje na wszystkich intefejsach sieciowych na porcie 4242. To, co odbierze będzie na bieżąco przekaywane do odtwarzacza.)
 @[6,8](raspivid przekazuje programowi netcat skompresowane wideo, netcat łączy się z serwerem i wysyła dane na bieżąco.)
+@[6,9,10](raspivid może też wysyłać dane bezpośrednio)
 
 +++
 
